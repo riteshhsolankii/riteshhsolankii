@@ -1,20 +1,10 @@
-var swiper = new Swiper(".projectSlider", {
-  slidesPerView: 1,
-  spaceBetween: 25,
-  loop: true,
-
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-
-  breakpoints: {
-    768: {
-      slidesPerView: 1.3,
-    },
-
-    992: {
-      slidesPerView: 2,
-    },
-  },
+$(function() {
+  // Owl Carousel
+  var owl = $(".owl-carousel");
+  owl.owlCarousel({
+    items: 3,
+    margin: 10,
+    loop: true,
+    nav: true
+  });
 });

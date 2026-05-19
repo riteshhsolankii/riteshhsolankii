@@ -65,10 +65,43 @@ li {
 /* =========================
    COLORS
 ========================= */
-
+#hero-banner {
+    background-image: url(../image/Banner-image.PNG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .primary-color {
     color: #ff9846;
     font-family: 'Bodoni Moda', serif !important;
+}
+
+.project-cotent-main {
+    border: 1px solid oklch(0.7 0.02 80 / 0.12);
+    background: rgba(255, 255, 255, 0.01);
+    transition: all 0.5s ease;
+}
+.project-cotent-main:hover {
+    border-color: #ff9846;
+}
+
+.project-work-wrapper li {
+    color: oklch(0.7 0.02 80);
+    border: 1px solid oklch(0.7 0.02 80 / 0.15);
+    border-radius: 100px;
+    padding: 10px 30px;
+    font-size: 12px;
+}
+.project-btn {
+    color: #fff;
+    transition: all 0.4s ease;
+}
+.project-btn:hover {
+    text-decoration: underline;
+    color: #ff9846;
+}
+.project-cotent-main:hover .project-image img {
+    transform: scale(1.05);
 }
 
 .my-btn {
@@ -329,6 +362,47 @@ li {
 .footer-link svg:hover {
     fill: #ff9846;
     transform: translateY(-2px);
+}
+
+.owl-stage {
+    display: flex;
+}
+
+.owl-item {
+    height: auto;
+}
+
+.project-top {
+    height: 100%;
+}
+
+.project-cotent-main {
+    background: #120805;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.project-name {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.owl-carousel .owl-stage-outer {
+    padding: 0 10px;
+}
+.project-main .owl-theme .owl-dots .owl-dot span {
+    width: 40px;
+    height: 10px;
+    background: #fff;
+}
+.project-main .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #ff9845;
+}
+.project-main .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #ff9845 !important;
+}
+
+.project-work-wrapper {
+    margin-top: auto;
 }
 
 /* =========================
