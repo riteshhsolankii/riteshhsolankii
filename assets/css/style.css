@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@200..800&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+span, p {
+    font-family: "Manrope", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bodoni Moda', serif;
 }
 
 .container {
@@ -11,3 +25,66 @@
     padding: 0 20px;
 }
 
+body {
+    background-color: oklch(16% .015 60) !important;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+.small-heading {
+    letter-spacing: 5px;
+}
+
+#header {
+    background-color: oklch(16% .015 60);
+    z-index: 1000;
+    border-bottom: 1px solid oklch(0.7 0.02 80 / 0.16);
+}
+.skills-badge-wrapper span {
+    border: 1px solid oklch(0.7 0.02 80 / 0.16);
+    font-weight: normal;
+    cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.skills-badge-wrapper span:hover {
+    border: 1px solid #ff9846;
+    color: #ff9846;
+    background-color: #3c2012;
+  
+}
+.header-logo {
+    font-size: 30px;
+    color: #fff;
+}
+.header-logo span {
+    color: #ff9846;
+}
+.primary-color {
+    color: #ff9846;
+}
+.btn-primary {
+    background: #ff9846;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+.btn-primary:hover {
+    background: #ea8d41;
+}
+
+.text-color {
+    color: oklch(0.7 0.02 80);
+}
+
+
+#footer {
+    border-top: 1px solid oklch(0.7 0.02 80 / 0.16);
+} 
+.footer-link svg {
+    fill: oklch(0.7 0.02 80);
+    transition: all 0.5s ease;
+}
+.footer-link svg:hover {
+    fill: #ff9846;
+}
