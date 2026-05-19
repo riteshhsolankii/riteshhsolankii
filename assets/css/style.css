@@ -1,90 +1,444 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@200..800&display=swap');
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 html {
     scroll-behavior: smooth;
 }
 
-span, p {
-    font-family: "Manrope", sans-serif;
+body {
+    background-color: oklch(16% .015 60) !important;
+    overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bodoni Moda', serif;
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    transition: all 0.4s ease;
+}
+
+.section-padding {
+    padding: 120px 0;
 }
 
 .container {
     width: 100%;
     max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding-inline: 24px;
 }
 
-body {
-    background-color: oklch(16% .015 60) !important;
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bodoni Moda', serif;
+    line-height: 1.1;
+    letter-spacing: -1px;
 }
 
-.section-padding {
-    padding: 100px 0;
-}
-.small-heading {
-    letter-spacing: 5px;
-}
-
-#header {
-    background-color: oklch(16% .015 60);
-    z-index: 1000;
-    border-bottom: 1px solid oklch(0.7 0.02 80 / 0.16);
-}
-.skills-badge-wrapper span {
-    border: 1px solid oklch(0.7 0.02 80 / 0.16);
-    font-weight: normal;
-    cursor: pointer;
-  transition: all 0.5s ease;
+p,
+span,
+a,
+li {
+    font-family: "Manrope", sans-serif;
 }
 
-.skills-badge-wrapper span:hover {
-    border: 1px solid #ff9846;
-    color: #ff9846;
-    background-color: #3c2012;
-  
+.small-heading,
+.about-label,
+.project-label,
+.experience-label,
+.info-label,
+.banner-subtitle {
+    letter-spacing: 4px;
+    font-size: 13px;
+    color: oklch(0.7 0.02 80);
 }
-.header-logo {
-    font-size: 30px;
-    color: #fff;
-}
-.header-logo span {
-    color: #ff9846;
-}
+
+/* =========================
+   COLORS
+========================= */
+
 .primary-color {
     color: #ff9846;
+    font-family: 'Bodoni Moda', serif !important;
 }
-.btn-primary {
-    background: #ff9846;
-    border-radius: 30px;
-    transition: all 0.5s ease;
-}
-.btn-primary:hover {
-    background: #ea8d41;
+
+.my-btn {
+    background-color: #ff9846 !important;
+    transition: all 0.5s ease !important;
 }
 
 .text-color {
     color: oklch(0.7 0.02 80);
 }
 
+/* =========================
+   HEADER
+========================= */
 
-#footer {
-    border-top: 1px solid oklch(0.7 0.02 80 / 0.16);
-} 
-.footer-link svg {
-    fill: oklch(0.7 0.02 80);
+#header {
+    background-color: rgba(22, 11, 6, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid oklch(0.7 0.02 80 / 0.12);
+}
+
+.header-logo {
+    font-size: 34px;
+    color: #fff;
+    font-family: 'Bodoni Moda', serif;
+}
+
+.header-logo span {
+    color: #ff9846;
+}
+
+.nav-link-custom {
+    color: oklch(0.7 0.02 80);
+    position: relative;
+}
+
+.nav-link-custom:hover {
+    color: #ff9846;
+}
+
+.nav-link-custom::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 1px;
+    background: #ff9846;
+    transition: 0.4s ease;
+}
+
+.nav-link-custom:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary,
+.banner-btn-primary,
+.hire-btn {
+    background: #ff9846;
+    border-radius: 100px;
+    color: #111;
+    border: none;
+    font-weight: 600;
+    transition: 0.4s ease;
+}
+
+.btn-primary:hover,
+.banner-btn-primary:hover,
+.hire-btn:hover {
+    background: #fff;
+}
+
+.banner-btn-outline {
+    border: 1px solid oklch(0.7 0.02 80 / 0.2);
+    color: #fff;
+    border-radius: 100px;
+}
+
+.banner-btn-outline:hover {
+    border-color: #ff9846;
+    color: #ff9846;
+    background: rgba(255,255,255,0.02);
+}
+
+.banner {
+    min-height: 60vh;
+    padding-top: 120px;
+}
+
+.banner-title {
+    font-size: clamp(2.5rem, 8vw, 7rem);
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.banner-text {
+    max-width: 760px;
+    color: oklch(0.7 0.02 80);
+    font-size: 1.2rem;
+    line-height: 1.9;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-text {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    line-height: 1.7;
+}
+
+.about-subtext {
+    color: oklch(0.7 0.02 80);
+    line-height: 2;
+    font-size: 1.1rem;
+}
+
+#about h5 {
+    font-size: 1.5rem;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-card {
+    border: 1px solid oklch(0.7 0.02 80 / 0.12);
+    background: rgba(255,255,255,0.01);
+    transition: 0.4s ease;
+}
+
+.experience-card:hover {
+    border-color: #ff9846;
+    transform: translateY(-4px);
+}
+
+.company-name {
+    color: #ff9846;
+}
+
+.experience-date {
+    color: oklch(0.7 0.02 80);
+}
+
+.experience-list li {
+    color: oklch(0.7 0.02 80);
+    margin-bottom: 14px;
+    line-height: 1.8;
+}
+
+.experience-list li::marker {
+    color: #ff9846;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project-card {
+    border: 1px solid oklch(0.7 0.02 80 / 0.12);
+    border-radius: 32px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.02);
+    transition: 0.5s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff9846;
+}
+
+.project-image img {
+    height: 340px;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.6s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-title {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.project-text {
+    color: oklch(0.7 0.02 80);
+    line-height: 1.9;
+}
+
+.project-category {
+    color: #ff9846;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.project-tag {
+    border: 1px solid oklch(0.7 0.02 80 / 0.15);
+    border-radius: 100px;
+    padding: 10px 18px;
+    color: oklch(0.7 0.02 80);
+    font-size: 14px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-badge-wrapper span {
+    border: 1px solid oklch(0.7 0.02 80 / 0.16);
+    font-weight: normal;
+    cursor: pointer;
     transition: all 0.5s ease;
 }
+
+.skills-badge-wrapper span:hover {
+    border-color: #ff9846;
+    color: #ff9846;
+    background-color: #3c2012;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-content h2 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+.contact-inner-content a:hover {
+    color: #ff9846 !important;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+#footer {
+    border-top: 1px solid oklch(0.7 0.02 80 / 0.12);
+}
+
+.footer-link svg {
+    fill: oklch(0.7 0.02 80);
+    transition: 0.4s ease;
+}
+
 .footer-link svg:hover {
     fill: #ff9846;
+    transform: translateY(-2px);
 }
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+
+    .section-padding {
+        padding: 90px 0;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    .banner {
+        text-align: center;
+    }
+
+    .project-image img {
+        height: 260px;
+    }
+
+    .project-title {
+        font-size: 1.8rem;
+    }
+
+    .about-text {
+        font-size: 1.4rem;
+    }
+
+    .container {
+        padding-inline: 20px;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .section-padding {
+        padding: 70px 0;
+    }
+
+    .header-logo {
+        font-size: 28px;
+    }
+
+    .hire-btn {
+        padding: 10px 20px !important;
+        font-size: 14px;
+    }
+
+    .banner {
+        padding-top: 120px;
+        min-height: auto;
+    }
+
+    .banner-title {
+        line-height: 1.2;
+    }
+
+    .banner-text {
+        font-size: 1rem;
+    }
+
+    .banner-btn-primary,
+    .banner-btn-outline {
+        width: 100%;
+    }
+
+    .project-content {
+        padding: 24px;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .project-image img {
+        height: 220px;
+    }
+
+    .about-text {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    .about-subtext {
+        font-size: 1rem;
+    }
+
+    #about h5 {
+        font-size: 1.2rem;
+    }
+
+    .contact-inner-content ul {
+        flex-direction: column;
+        gap: 18px !important;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+}
+

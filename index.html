@@ -9,50 +9,113 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
         integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="assets/js/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-    <header id="header" class="position-fixed w-100 top-0 left-0 py-4">
+    <header id="header" class="position-fixed top-0 start-0 w-100 py-4">
         <div class="container">
-            <div class="header-inner d-flex align-items-center justify-content-between">
-                <div class="header-logo">
-                    Ritesh <span>.</span>
+            <div class="d-flex align-items-center justify-content-between">
+                <!-- Logo -->
+                <div class="header-logo text-white fs-3 fw-semibold">
+                    Ritesh <span class="text-warning">.</span>
                 </div>
-                <nav class="header-nav">
-                    <ul class="d-flex align-items-center justify-content-center gap-4 list-unstyled m-0">
-                        <li><a class="text-decoration-none text-color fs-6" href="#about">About</a></li>
-                        <li><a class="text-decoration-none text-color fs-6" href="#work">Work</a></li>
-                        <li><a class="text-decoration-none text-color fs-6" href="#projects">Projects</a></li>
-                        <li><a class="text-decoration-none text-color fs-6" href="#skills">Skills</a></li>
-                        <li><a class="text-decoration-none text-color fs-6" href="#contact">Contact</a></li>
+                <!-- Desktop Menu -->
+                <nav class="d-none d-lg-block">
+                    <ul class="d-flex align-items-center gap-4 list-unstyled mb-0">
+                        <li>
+                            <a class="text-decoration-none nav-link-custom" href="#about">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none nav-link-custom" href="#work">
+                                Work
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none nav-link-custom" href="#projects">
+                                Projects
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none nav-link-custom" href="#skills">
+                                Skills
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="text-decoration-none nav-link-custom" href="#contact">
+                                Contact
+                            </a>
+                        </li>
+
                     </ul>
                 </nav>
-                <div class="header-btn">
-                    <a class="btn-primary text-decoration-none text-dark fs-6 py-3 px-4"
-                        href="mailto:riteshhsolankii@gmail.com">Hire Me</a>
+
+                <!-- Button -->
+                <div>
+                    <a href="mailto:riteshhsolankii@gmail.com" class="text-decoration-none my-btn hire-btn rounded-pill px-4 py-lg-3 py-2">
+                        Hire Me
+                    </a>
                 </div>
             </div>
-
+        </div>
     </header>
 
-    <section class="banner section-padding">
-        <div class="container">
-            <span>Web Designer · Indore, India</span>
-            <h1>Crafting websites that feel <span class="primary-color">effortless</span> & look honest.</h1>
-            <p>I'm Ritesh — I turn Figma and PSD designs into responsive, fast, on-brand websites using HTML, CSS,
-                WordPress and Elementor.</p>
-            <div class="banner-btn">
-                <a href="#">View my work</a>
-                <a href="#">Get in touch</a>
+<section class="banner min-vh-100 d-flex align-items-center py-5">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-center">
+
+                <!-- Small Text -->
+                <span
+                    class="d-inline-block text-uppercase banner-subtitle mb-4">
+                    Web Designer · Indore, India
+                </span>
+
+                <!-- Heading -->
+                <h1 class="banner-title text-white mb-4">
+                    Crafting websites that feel
+                    <span class="primary-color">effortless</span>
+                    & look honest.
+                </h1>
+
+                <!-- Paragraph -->
+                <p class="banner-text mx-auto mb-5">
+                    I'm Ritesh — I turn Figma and PSD designs into
+                    responsive, fast, on-brand websites using HTML,
+                    CSS, WordPress and Elementor.
+                </p>
+
+                <!-- Buttons -->
+                <div
+                    class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+
+                    <a href="#projects"
+                        class="banner-btn-primary text-decoration-none rounded-pill px-4 py-3">
+                        View my work
+                    </a>
+
+                    <a href="#contact"
+                        class="text-decoration-none banner-btn-outline rounded-pill px-4 py-3">
+                        Get in touch
+                    </a>
+
+                </div>
+
             </div>
         </div>
-
-    </section>
+    </div>
+</section>
 
 
     <section id="about" class="py-5">
@@ -69,7 +132,6 @@
 
                 <!-- Right Content -->
                 <div class="col-lg-8">
-
                     <!-- Description -->
                     <div class="about-content">
 
@@ -148,11 +210,8 @@
                 </h2>
             </div>
 
-            <!-- Experience Card 01 -->
-            <div class="experience-card rounded-5 p-4 p-lg-5 mb-4">
-
+                        <div class="experience-card rounded-5 p-4 p-lg-5 mb-4">
                 <div class="d-flex flex-column flex-lg-row justify-content-between gap-4">
-
                     <!-- Left Content -->
                     <div>
                         <h3 class="text-white fw-normal mb-2">
@@ -183,7 +242,86 @@
                     <!-- Right Date -->
                     <div class="text-lg-end">
                         <span class="experience-date">
-                            Sep 2023 — Present
+                            Sep 2023 — Oct 2024
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+                        <div class="experience-card rounded-5 p-4 p-lg-5 mb-4">
+                <div class="d-flex flex-column flex-lg-row justify-content-between gap-4">
+                    <!-- Left Content -->
+                    <div>
+                        <h3 class="text-white fw-normal mb-2">
+                            Web Designer
+                        </h3>
+
+                        <h5 class="company-name mb-4">
+                            Mono Infotech Pvt. Ltd.
+                        </h5>
+
+                        <ul class="ps-3 mb-0 experience-list">
+                            <li>
+                                Convert Figma/PSD designs into pixel-perfect,
+                                responsive HTML.
+                            </li>
+
+                            <li>
+                                Build and customize WordPress sites using Elementor.
+                            </li>
+
+                            <li>
+                                Design and ship ClickFunnels landing & pre-lander
+                                pages.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Date -->
+                    <div class="text-lg-end">
+                        <span class="experience-date">
+                            Sep 2023 — Oct 2024
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Experience Card 01 -->
+            <div class="experience-card rounded-5 p-4 p-lg-5 mb-4">
+                <div class="d-flex flex-column flex-lg-row justify-content-between gap-4">
+                    <!-- Left Content -->
+                    <div>
+                        <h3 class="text-white fw-normal mb-2">
+                            Web Designer
+                        </h3>
+
+                        <h5 class="company-name mb-4">
+                            Mono Infotech Pvt. Ltd.
+                        </h5>
+
+                        <ul class="ps-3 mb-0 experience-list">
+                            <li>
+                                Convert Figma/PSD designs into pixel-perfect,
+                                responsive HTML.
+                            </li>
+
+                            <li>
+                                Build and customize WordPress sites using Elementor.
+                            </li>
+
+                            <li>
+                                Design and ship ClickFunnels landing & pre-lander
+                                pages.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Date -->
+                    <div class="text-lg-end">
+                        <span class="experience-date">
+                            Sep 2023 — Oct 2024
                         </span>
                     </div>
 
